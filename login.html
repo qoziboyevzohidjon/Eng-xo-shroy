@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0d0d">
+  <title>Kirish — Qirqim Barber Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/trail.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</head>
+<body class="auth-page">
+  <canvas class="mouse-trail" aria-hidden="true"></canvas>
+  <div class="auth-atmosphere" aria-hidden="true"><span></span><span></span><span></span><div class="auth-line"></div></div>
+  <a class="auth-brand" href="Index.html"><span class="brand-mark">Q</span><span class="brand-copy"><strong>QIRQIM</strong><small>BARBER STUDIO · TASHKENT</small></span></a>
+  <main class="auth-layout">
+    <section class="auth-editorial"><p class="eyebrow">QIRQIM BARBER STUDIO</p><h1>O‘zingizga<br><em>yarashadigan</em><br>uslubni toping.</h1><p>Yaxshi qirqim — mayda detallardan boshlanadi.</p><div class="auth-editorial-foot"><span>01 — USLUB</span><span>02 — USTA</span><span>03 — ISHONCH</span></div></section>
+    <section class="auth-card" aria-labelledby="auth-title">
+      <div class="auth-card-heading"><span class="eyebrow">QIRQIM JAMOASIGA</span><h2 id="auth-title">Xush kelibsiz</h2><p>Davom etish uchun hisobingizga kiring.</p></div>
+      <div class="auth-tabs" role="tablist" aria-label="Hisob turi"><button class="auth-tab is-active" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="auth-form" data-mode="login">Kirish</button><button class="auth-tab" id="register-tab" type="button" role="tab" aria-selected="false" aria-controls="auth-form" data-mode="register">Ro‘yxatdan o‘tish</button></div>
+      <form id="auth-form" novalidate>
+        <div class="auth-error" id="auth-error" role="alert" hidden></div>
+        <label id="name-field" hidden>Ismingiz<input name="name" type="text" autocomplete="name" placeholder="Ism Familiya"></label>
+        <label>Email manzilingiz<input name="email" type="email" autocomplete="email" placeholder="siz@email.com" required></label>
+        <label>Parol<span class="password-wrap"><input name="password" type="password" autocomplete="current-password" placeholder="Kamida 6 belgi" required><button class="password-toggle" type="button" aria-label="Parolni ko‘rsatish">Ko‘rsatish</button></span></label>
+        <button class="primary-button auth-submit" type="submit">Kirish <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-legal">Davom etish orqali demo hisob ma’lumotlari ushbu qurilmada saqlanishiga rozilik bildirasiz.</p>
+    </section>
+  </main>
+  <p class="auth-copyright">© 2026 QIRQIM · TASHKENT</p>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="uz">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#0d0d0d">
+	<meta name="description" content="Qirqim — sartaroshxona uslublari galereyasi va navbat olish.">
+	<title>Qirqim — Barbershop Studio</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/trail.js" defer></script>
+	<script src="js/app.js" defer></script>
+</head>
+<body class="app-page">
+	<canvas class="mouse-trail" aria-hidden="true"></canvas>
+	<main class="app-shell" hidden>
+		<header class="masthead">
+			<a class="brand" href="Index.html" aria-label="Qirqim bosh sahifasi">
+				<span class="brand-mark" aria-hidden="true">Q</span>
+				<span class="brand-copy"><strong>QIRQIM</strong><small>BARBER STUDIO · TASHKENT</small></span>
+			</a>
+			<div class="header-tools">
+				<label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Uslub yoki usta izlash" aria-label="Uslub yoki usta izlash"></label>
+				<button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Rang rejimini almashtirish" title="Rang rejimini almashtirish">☼</button>
+				<button class="avatar-button" id="profile-button" type="button" aria-label="Profil va chiqish"></button>
+			</div>
+		</header>
+
+		<section class="intro-band">
+			<div class="intro-copy"><p class="eyebrow">USLUB — BU IMZO</p><h1>Yangi qiyofangiz<br><em>shu yerdan boshlanadi.</em></h1><p class="intro-note">Ustalar ishlarini kashf eting, yoqqanini saqlang va keyingi tashrifingizni rejalashtiring.</p></div>
+			<div class="intro-stamp" aria-hidden="true"><span>EST.</span><strong>2018</strong><i>✳</i></div>
+		</section>
+
+		<section class="feed-section page-view" id="view-feed" aria-labelledby="feed-heading">
+			<div class="section-heading"><div><p class="eyebrow">STUDIYADAN</p><h2 id="feed-heading">So‘nggi ishlar</h2></div><button class="primary-button create-post-open" type="button"><span aria-hidden="true">＋</span> Post qo‘shish</button></div>
+			<div class="feed-controls">
+				<div class="filter-list" id="category-filters" aria-label="Kategoriya filtrlari"></div>
+				<label class="sort-select"><span>Ko‘rsatish:</span><select id="sort-select" aria-label="Postlarni saralash"><option value="recent">Eng yangi</option><option value="popular">Eng mashhur</option></select></label>
+			</div>
+			<div class="post-grid" id="post-grid" aria-live="polite"></div>
+			<p class="empty-state" id="empty-state" hidden>Bu bo‘limda hozircha post yo‘q.</p>
+		</section>
+
+		<section class="feed-section page-view" id="view-saved" aria-labelledby="saved-heading" hidden>
+			<div class="section-heading"><div><p class="eyebrow">SIZ UCHUN</p><h2 id="saved-heading">Saqlanganlar</h2></div></div>
+			<div class="post-grid" id="saved-grid"></div><p class="empty-state" id="saved-empty">Hali saqlangan ishlar yo‘q.</p>
+		</section>
+
+		<section class="booking-section page-view" id="view-booking" aria-labelledby="booking-heading" hidden>
+			<div class="booking-copy"><p class="eyebrow">O‘ZINGIZGA VAQT AJRATING</p><h2 id="booking-heading">Navbat<br><em>oling.</em></h2><p>Uslubingizni tanlang, qolganini ustalarimizga qo‘yib bering.</p><div class="booking-detail"><span>⌖</span><div><strong>QIRQIM BARBER STUDIO</strong><small>Toshkent, Shota Rustaveli ko‘chasi</small></div></div></div>
+			<form class="booking-form" id="booking-form">
+				<label>Usta<select name="barber" required><option value="">Ustani tanlang</option><option>Azizbek Karimov</option><option>Jasur Olimov</option><option>Bekzod Rahimov</option></select></label>
+				<label>Xizmat<select name="service" required><option value="">Xizmatni tanlang</option><option>Fade cut · 90 000 so‘m</option><option>Klassik qirqim · 80 000 so‘m</option><option>Soqol parvarishi · 50 000 so‘m</option><option>Soch + soqol · 130 000 so‘m</option></select></label>
+				<div class="form-row"><label>Sana<input type="date" name="date" required></label><label>Vaqt<select name="time" required><option value="">Vaqt</option><option>10:00</option><option>11:30</option><option>13:00</option><option>14:30</option><option>16:00</option><option>17:30</option></select></label></div>
+				<button class="primary-button" type="submit">Navbatni tasdiqlash <span aria-hidden="true">→</span></button>
+				<p class="form-footnote">Bu demo bron. Tasdiqlash uchun studiyamiz siz bilan bog‘lanadi.</p>
+			</form>
+		</section>
+
+		<section class="team-section page-view" id="view-team" aria-labelledby="team-heading" hidden>
+			<div class="section-heading"><div><p class="eyebrow">QO‘LLARIDA SAN’AT</p><h2 id="team-heading">Ustalarimiz</h2></div></div>
+			<div class="team-grid" id="team-grid"></div>
+		</section>
+
+		<footer class="site-footer"><span>© 2026 Qirqim Barber Studio</span><span>Yaxshi qirqim. Yaxshi kayfiyat.</span></footer>
+	</main>
+
+	<nav class="dock" aria-label="Asosiy navigatsiya">
+		<button class="dock-link is-active" type="button" data-view="feed" aria-label="Lenta" aria-current="page"><span aria-hidden="true">⌂</span><small>Lenta</small></button>
+		<button class="dock-link" type="button" data-view="saved" aria-label="Saqlanganlar"><span aria-hidden="true">♡</span><small>Saqlangan</small></button>
+		<button class="dock-link dock-create create-post-open" type="button" aria-label="Yangi post"><span aria-hidden="true">＋</span></button>
+		<button class="dock-link" type="button" data-view="booking" aria-label="Navbat olish"><span aria-hidden="true">◷</span><small>Navbat</small></button>
+		<button class="dock-link" type="button" data-view="team" aria-label="Ustalar"><span aria-hidden="true">♙</span><small>Ustalar</small></button>
+	</nav>
+
+	<dialog class="modal" id="post-modal" aria-labelledby="post-modal-title">
+		<form class="modal-content" id="post-form">
+			<div class="modal-heading"><div><p class="eyebrow">STUDIYAGA ULASHING</p><h2 id="post-modal-title">Yangi post</h2></div><button class="icon-button modal-close" type="button" aria-label="Yopish">×</button></div>
+			<label class="upload-field" for="post-image"><span class="upload-icon" aria-hidden="true">↥</span><strong>Rasm tanlang</strong><small>JPG yoki PNG · qurilmangizdan</small><img id="image-preview" alt="Tanlangan rasm ko‘rinishi" hidden></label>
+			<input id="post-image" name="image" type="file" accept="image/*" required class="visually-hidden">
+			<label>Sarlavha<input name="title" type="text" maxlength="60" placeholder="Masalan: Textured crop" required></label>
+			<label>Kategoriya<select name="category" required><option value="">Kategoriyani tanlang</option><option>Fade</option><option>Undercut</option><option>Klassik</option><option>Soqol</option><option>Bolalar uchun</option></select></label>
+			<button class="primary-button" type="submit">Postni ulashish <span aria-hidden="true">→</span></button>
+		</form>
+	</dialog>
+	<dialog class="lightbox" id="lightbox" aria-label="Rasmni kattalashtirib ko‘rish"><button class="lightbox-close" type="button" aria-label="Yopish">×</button><img id="lightbox-image" alt=""></dialog>
+	<div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
